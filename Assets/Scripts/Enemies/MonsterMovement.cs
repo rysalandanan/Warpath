@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class MonsterMovement : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Rigidbody2D rb2D;
+    [SerializeField] private Rigidbody2D rigidBody2D;
 
     [Header("Enemy Attributes")]
     [SerializeField] private float movementSpeed = 2f;
@@ -35,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 direction = (_targetPath.position - transform.position).normalized;
-        rb2D.velocity = direction * movementSpeed;
+        rigidBody2D.velocity = direction * movementSpeed;
     }
 
     private void SetPath()
