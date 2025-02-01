@@ -13,19 +13,22 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        _targetPath = LevelManager.main.enemyPath[_pathIndex];
+        
+        SetPath();
     }
     private void Update()
     {
         if (Vector2.Distance(_targetPath.position, transform.position) <= 0.1f)
         {
             _pathIndex++;
-            _targetPath = LevelManager.main.enemyPath[_pathIndex];
-
-            if (_pathIndex >= LevelManager.main.enemyPath.Length)
+            if(IsAtEndOfPath())
             {
                 Destroy(gameObject);
                 return;
+            }
+            else
+            {
+                SetPath();
             }
         }
     }
@@ -35,4 +38,12 @@ public class EnemyMovement : MonoBehaviour
         rb2D.velocity = direction * movementSpeed;
     }
 
+    private void SetPath()
+    {
+        _targetPath = LevelManager.main.enemyPath[_pathIndex];
+    }
+    private bool IsAtEndOfPath()
+    {
+        return _pathIndex >= LevelManager.main.enemyPath.Length;
+    }
 }
