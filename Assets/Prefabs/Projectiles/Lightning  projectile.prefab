@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8759059424392291880}
   m_Layer: 0
   m_Name: Lightning  projectile
-  m_TagString: Untagged
+  m_TagString: Lightning Bolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 169183603267761869}
   m_Layer: 0
   m_Name: Crossbow Bolt projectile
-  m_TagString: Untagged
+  m_TagString: Crossbow Bolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

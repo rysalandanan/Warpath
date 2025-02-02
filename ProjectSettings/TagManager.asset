@@ -7,6 +7,12 @@ TagManager:
   - Monster
   - Buildable
   - Tower Range
+  - Arrow
+  - Crossbow Bolt
+  - Cannon Ball
+  - Ice Shard
+  - Lightning Bolt
+  - Poison
   layers:
   - Default
   - TransparentFX

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8058961525658409768}
   - component: {fileID: 1182071581969008502}
   - component: {fileID: 1202241354502705282}
-  - component: {fileID: 5322747675466874869}
   - component: {fileID: 2322239949311093611}
+  - component: {fileID: -7589768450011776948}
+  - component: {fileID: 5322747675466874869}
   m_Layer: 0
   m_Name: Ghost - Monster
   m_TagString: Monster
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -160,20 +161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5322747675466874869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8288896812983466902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e85475a558727c546bca6cd3a86f856f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidBody2D: {fileID: 1202241354502705282}
-  movementSpeed: 2
 --- !u!95 &2322239949311093611
 Animator:
   serializedVersion: 5
@@ -195,3 +182,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7589768450011776948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288896812983466902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4bccec76876e74fa48c76d6ec57e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterHealth: 50
+--- !u!114 &5322747675466874869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288896812983466902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85475a558727c546bca6cd3a86f856f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody2D: {fileID: 1202241354502705282}
+  movementSpeed: 2
