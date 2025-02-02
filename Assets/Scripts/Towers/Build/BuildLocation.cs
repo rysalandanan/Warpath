@@ -5,10 +5,12 @@ public class BuildLocation : MonoBehaviour
     [SerializeField] private GameObject towerShopPanel;
     private BuildMaster _buildMaster;
     private Vector3 _selectedLocation;
+    private SpriteRenderer _spriteRenderer;
     public bool hasBuild = false;
     private void Start()
     {
         _buildMaster = FindAnyObjectByType<BuildMaster>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void OnMouseDown()
     {
@@ -30,5 +32,9 @@ public class BuildLocation : MonoBehaviour
     public void CloseTowerShop()
     {
         towerShopPanel.SetActive(false);
+        if (hasBuild)
+        {
+            _spriteRenderer.sprite = null;
+        }
     }
 }

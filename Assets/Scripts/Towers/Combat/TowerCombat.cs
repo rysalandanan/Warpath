@@ -8,6 +8,8 @@ public class TowerCombat : MonoBehaviour
     [SerializeField] private float projectSpeed;
     [SerializeField] private float rateOfFire;
     [SerializeField] private float angleOffset = 0f;
+
+    [SerializeField] private Transform projectileSpawn;
     private TowerCombatRange _towerCombatRange;
     private bool isInRange = false;
     private bool canFire = true;
@@ -41,9 +43,9 @@ public class TowerCombat : MonoBehaviour
         if (targetMonster == null) yield break; // Stop if the target is gone
 
         canFire = false; // Prevent immediate next attack
-        GameObject spawnedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+        GameObject spawnedProjectile = Instantiate(projectile, projectileSpawn.position, Quaternion.identity);
 
-        Vector2 direction = (targetMonster.transform.position - transform.position).normalized;
+        Vector2 direction = (targetMonster.transform.position - projectileSpawn.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Apply the angleOffset to adjust the projectile's facing direction

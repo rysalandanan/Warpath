@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5439794778185957279}
   - component: {fileID: 3459809875958306547}
   - component: {fileID: 5311773786934984326}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CT - Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5948430542608219636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &782014706588777157
@@ -148,5 +149,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7312630345194061117, guid: 6fe8386ae6626cf4289a4e17b8ad2a86, type: 3}
   projectSpeed: 10
-  rateOfFire: 0.1
+  rateOfFire: 0.4
   angleOffset: 0
+  projectileSpawn: {fileID: 5948430542608219636}
+--- !u!1 &9071920420570940801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5948430542608219636}
+  m_Layer: 2
+  m_Name: Projectile Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5948430542608219636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071920420570940801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.441, y: 0.889, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4697187713509145883}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
