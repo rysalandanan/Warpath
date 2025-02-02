@@ -1,56 +1,91 @@
 using UnityEngine;
+using System.Collections;
 
 public class MonsterHealthPoints : MonoBehaviour
 {
     [SerializeField] private float monsterHealth;
 
+    private SpriteRenderer _spriteRenderer;
+    private MonsterMovement _monsterMovement;
     private float _arrowDamage = 5;
     private float _crossbowBoltDamage = 10;
     private float _cannonBallDamage = 15;
-    private float _iceShard = 7;
+    private float _iceShardDamage = 7;
     private float _lightningBoldDamage = 9;
     private float _poisonDamage = 3;
-    
+
+    private bool _isCurrentlyDebuff = false;
+    private void Start()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _monsterMovement = GetComponent<MonsterMovement>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Arrow"))
         {
-            ReduceHealthPoints(_arrowDamage);
+            FlatDamage(_arrowDamage);
             DestroyProjectile(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("Crossbow Bolt"))
         {
-            ReduceHealthPoints(_crossbowBoltDamage);
+            FlatDamage(_crossbowBoltDamage);
             DestroyProjectile(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("Cannon Ball"))
         {
-            ReduceHealthPoints(_cannonBallDamage);
+            FlatDamage(_cannonBallDamage);
         }
         if(collision.gameObject.CompareTag("Ice Shard"))
         {
-            ReduceHealthPoints(_iceShard);
+            FlatDamage(_iceShardDamage);
+            if(!_isCurrentlyDebuff)
+            {
+                StartCoroutine(SlowDebuff());
+            }  
             DestroyProjectile(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("Lightning Bolt"))
         {
-            ReduceHealthPoints(_lightningBoldDamage);
+            FlatDamage(_lightningBoldDamage);
             DestroyProjectile(collision.gameObject);
         }
         if(collision.gameObject.CompareTag("Poison"))
         {
-            ReduceHealthPoints(_poisonDamage);
+            StartCoroutine(DamageOvertime(_poisonDamage));
             DestroyProjectile(collision.gameObject);
         }
     }
-    private void ReduceHealthPoints(float damageValue)
+    private void FlatDamage(float damageValue)
     {
-        monsterHealth -= damageValue;
-        CheckHealthPoints();
+        ReduceHealthPoints(damageValue);
+    }
+    private IEnumerator DamageOvertime(float poisonDamage)
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            FlatDamage(poisonDamage);
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
+    private IEnumerator SlowDebuff()
+    {
+        _isCurrentlyDebuff = true;
+        float originalSpeed = _monsterMovement.movementSpeed;
+        _monsterMovement.movementSpeed = _monsterMovement.movementSpeed / 2;
+        yield return new WaitForSeconds(3.5f);
+        _monsterMovement.movementSpeed = originalSpeed;
+        _isCurrentlyDebuff = false;
     }
     private void DestroyProjectile(GameObject projectile)
     {
         Destroy(projectile);
+    }
+    private void ReduceHealthPoints(float damageValue)
+    {
+        monsterHealth -= damageValue;
+        StartCoroutine(HitFlash());
+        CheckHealthPoints();
     }
     private void CheckHealthPoints()
     {
@@ -59,6 +94,11 @@ public class MonsterHealthPoints : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    private IEnumerator HitFlash()
+    {
+        _spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        _spriteRenderer.color = Color.white;
+    }
 }
 

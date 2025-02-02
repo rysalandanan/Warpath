@@ -6,7 +6,7 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidBody2D;
 
     [Header("Enemy Attributes")]
-    [SerializeField] private float movementSpeed = 2f;
+    public float movementSpeed = 2f;
 
     private Transform _targetPath;
     private int _pathIndex = 0;
