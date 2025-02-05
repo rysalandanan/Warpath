@@ -1,6 +1,7 @@
 using UnityEngine;
 public class TowerHealth : MonoBehaviour
 {
+    /*
     [SerializeField] private float healthPoints = 100;
     [SerializeField] private float damagePerSecond = 1;
 
@@ -26,4 +27,5 @@ public class TowerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
 }

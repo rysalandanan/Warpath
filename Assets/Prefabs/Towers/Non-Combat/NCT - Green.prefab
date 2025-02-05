@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5437141511376525561}
   - component: {fileID: 8067689938680788111}
   - component: {fileID: 1264005168712422666}
+  - component: {fileID: 2330944710943097720}
   m_Layer: 0
   m_Name: NCT - Green
   m_TagString: Untagged
@@ -165,5 +166,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25908c80d5958841b060bf9bb457186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
-  damagePerSecond: 1
+--- !u!114 &2330944710943097720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742914251459353708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c48502fc64cb72469c1f57b6bfb2e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

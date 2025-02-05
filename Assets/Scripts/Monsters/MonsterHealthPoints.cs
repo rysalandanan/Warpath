@@ -7,6 +7,7 @@ public class MonsterHealthPoints : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private MonsterMovement _monsterMovement;
+    private CurrencyManager _currencyManager;
     private float _arrowDamage = 5;
     private float _crossbowBoltDamage = 10;
     private float _cannonBallDamage = 15;
@@ -19,6 +20,7 @@ public class MonsterHealthPoints : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _monsterMovement = GetComponent<MonsterMovement>();
+        _currencyManager = FindAnyObjectByType<CurrencyManager>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -91,6 +93,7 @@ public class MonsterHealthPoints : MonoBehaviour
     {
         if(monsterHealth <=0)
         {
+            _currencyManager.GainGold(2);
             Destroy(gameObject);
         }
     }

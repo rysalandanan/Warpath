@@ -2927,6 +2927,7 @@ GameObject:
   - component: {fileID: 161914469}
   - component: {fileID: 161914468}
   - component: {fileID: 161914467}
+  - component: {fileID: 161914470}
   m_Layer: 5
   m_Name: Combat Crossbow tower
   m_TagString: Untagged
@@ -3021,6 +3022,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 161914470}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 60
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &161914468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,6 +3072,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161914465}
   m_CullTransparentMesh: 1
+--- !u!114 &161914470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161914465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 60
+  towerBuyButton: {fileID: 161914467}
 --- !u!1 &230897082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3284,6 +3313,7 @@ GameObject:
   - component: {fileID: 291619338}
   - component: {fileID: 291619337}
   - component: {fileID: 291619336}
+  - component: {fileID: 291619339}
   m_Layer: 5
   m_Name: Combat Cannon tower
   m_TagString: Untagged
@@ -3378,6 +3408,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 291619339}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 40
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &291619337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,6 +3458,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291619334}
   m_CullTransparentMesh: 1
+--- !u!114 &291619339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291619334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 40
+  towerBuyButton: {fileID: 291619336}
 --- !u!1 &300529048
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,6 +3619,7 @@ GameObject:
   - component: {fileID: 311675052}
   - component: {fileID: 311675051}
   - component: {fileID: 311675050}
+  - component: {fileID: 311675053}
   m_Layer: 5
   m_Name: Combat Poison tower
   m_TagString: Untagged
@@ -3655,6 +3714,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 311675053}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 120
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &311675051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3693,6 +3764,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311675048}
   m_CullTransparentMesh: 1
+--- !u!114 &311675053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311675048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 120
+  towerBuyButton: {fileID: 311675050}
 --- !u!1 &354796885
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,6 +3956,7 @@ GameObject:
   - component: {fileID: 445802216}
   - component: {fileID: 445802215}
   - component: {fileID: 445802214}
+  - component: {fileID: 445802217}
   m_Layer: 5
   m_Name: Non-Combat green tower
   m_TagString: Untagged
@@ -3963,6 +4051,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 445802217}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 80
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &445802215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4001,6 +4101,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445802212}
   m_CullTransparentMesh: 1
+--- !u!114 &445802217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445802212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 80
+  towerBuyButton: {fileID: 445802214}
 --- !u!1 &460578932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,6 +4410,7 @@ GameObject:
   - component: {fileID: 527363813}
   - component: {fileID: 527363812}
   - component: {fileID: 527363811}
+  - component: {fileID: 527363814}
   m_Layer: 5
   m_Name: Combat Ice tower
   m_TagString: Untagged
@@ -4388,6 +4505,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 527363814}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 80
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &527363812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4426,6 +4555,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527363809}
   m_CullTransparentMesh: 1
+--- !u!114 &527363814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527363809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 80
+  towerBuyButton: {fileID: 527363811}
 --- !u!1 &549364048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4609,6 +4754,7 @@ GameObject:
   - component: {fileID: 587392354}
   - component: {fileID: 587392353}
   - component: {fileID: 587392352}
+  - component: {fileID: 587392355}
   m_Layer: 5
   m_Name: Non-Combat blue tower
   m_TagString: Untagged
@@ -4703,6 +4849,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 587392355}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 50
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &587392353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4741,6 +4899,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587392350}
   m_CullTransparentMesh: 1
+--- !u!114 &587392355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587392350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 50
+  towerBuyButton: {fileID: 587392352}
 --- !u!1 &605310541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5221,6 +5395,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637729638}
   m_CullTransparentMesh: 1
+--- !u!1 &693941301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693941304}
+  - component: {fileID: 693941303}
+  - component: {fileID: 693941302}
+  m_Layer: 5
+  m_Name: Currency count
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &693941302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693941301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Currency here
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c12467b9511da2c45952a26246a57801, type: 2}
+  m_sharedMaterial: {fileID: 1240719491550828214, guid: c12467b9511da2c45952a26246a57801, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278252287
+  m_fontColor: {r: 1, g: 0.95084643, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30.05
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &693941303
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693941301}
+  m_CullTransparentMesh: 1
+--- !u!224 &693941304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693941301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1109416927}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &750463720
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,6 +5941,7 @@ GameObject:
   - component: {fileID: 823606215}
   - component: {fileID: 823606214}
   - component: {fileID: 823606213}
+  - component: {fileID: 823606216}
   m_Layer: 5
   m_Name: Combat Lightning tower
   m_TagString: Untagged
@@ -5727,6 +6036,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 823606216}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &823606214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5765,6 +6086,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823606211}
   m_CullTransparentMesh: 1
+--- !u!114 &823606216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823606211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 100
+  towerBuyButton: {fileID: 823606213}
 --- !u!1 &829098717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +6283,8 @@ MonoBehaviour:
   towerHolder: {fileID: 1437654600}
   towerSelected: {fileID: 230897083}
   towerShop: {fileID: 2045793479}
+  currencyManager: {fileID: 1703515536}
+  selectedTowerPrice: 0
 --- !u!1 &869646182
 GameObject:
   m_ObjectHideFlags: 0
@@ -6091,6 +6430,7 @@ GameObject:
   - component: {fileID: 1044332751}
   - component: {fileID: 1044332750}
   - component: {fileID: 1044332749}
+  - component: {fileID: 1044332752}
   m_Layer: 5
   m_Name: Non-Combat red tower
   m_TagString: Untagged
@@ -6185,6 +6525,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1044332752}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1044332750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6223,6 +6575,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044332747}
   m_CullTransparentMesh: 1
+--- !u!114 &1044332752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044332747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 100
+  towerBuyButton: {fileID: 1044332749}
 --- !u!1 &1058437158
 GameObject:
   m_ObjectHideFlags: 0
@@ -6892,6 +7260,7 @@ RectTransform:
   m_Children:
   - {fileID: 2045793480}
   - {fileID: 549364049}
+  - {fileID: 693941304}
   m_Father: {fileID: 2064967075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7487,6 +7856,7 @@ Transform:
   - {fileID: 496535875}
   - {fileID: 1552956204}
   - {fileID: 868569011}
+  - {fileID: 1703515535}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356668063
@@ -9180,6 +9550,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703061884}
   m_CullTransparentMesh: 1
+--- !u!1 &1703515534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703515535}
+  - component: {fileID: 1703515536}
+  m_Layer: 0
+  m_Name: Currency Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703515535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703515534}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1340227171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703515536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703515534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f139cab15c42348aa29ac0d9d9534e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyCount: {fileID: 693941302}
+  towerRequirements:
+  - {fileID: 587392355}
+  - {fileID: 445802217}
+  - {fileID: 1044332752}
+  - {fileID: 1716293277}
+  - {fileID: 291619339}
+  - {fileID: 161914470}
+  - {fileID: 527363814}
+  - {fileID: 823606216}
+  - {fileID: 311675053}
+  totalGold: 200
 --- !u!1 &1716293272
 GameObject:
   m_ObjectHideFlags: 0
@@ -9192,6 +9618,7 @@ GameObject:
   - component: {fileID: 1716293276}
   - component: {fileID: 1716293275}
   - component: {fileID: 1716293274}
+  - component: {fileID: 1716293277}
   m_Layer: 5
   m_Name: Combat Archer tower
   m_TagString: Untagged
@@ -9286,6 +9713,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1716293277}
+        m_TargetAssemblyTypeName: TowerRequirements, Assembly-CSharp
+        m_MethodName: SendTowerPrice
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 20
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1716293275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9324,6 +9763,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716293272}
   m_CullTransparentMesh: 1
+--- !u!114 &1716293277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716293272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8805ad9e757d4d864f84fbdc13d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyManager: {fileID: 1703515536}
+  buildMaster: {fileID: 868569012}
+  towerPrice: 20
+  towerBuyButton: {fileID: 1716293274}
 --- !u!1 &1767917665
 GameObject:
   m_ObjectHideFlags: 0

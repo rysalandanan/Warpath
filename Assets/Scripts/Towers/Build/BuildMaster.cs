@@ -12,11 +12,16 @@ public class BuildMaster : MonoBehaviour
     [Tooltip("Drag the Tower Shop Panel here:")]
     [SerializeField] private GameObject towerShop;
 
+    [SerializeField] private CurrencyManager currencyManager;
+
+    public float selectedTowerPrice;
     private Vector3 _selectedLocation;
     private GameObject _towerSelected;
     private Sprite _spriteSelected;
     private bool isBuilding = false;
     private Vector3 _mousePosition;
+    
+   
     private void Update()
     {
         if(isBuilding)
@@ -60,6 +65,7 @@ public class BuildMaster : MonoBehaviour
         Instantiate(selectedTower, _selectedLocation, Quaternion.identity, towerHolder.transform);
         isBuilding = false;
         ActivateDeactivateTowerImage(false);
+        currencyManager.ReduceGold(selectedTowerPrice);
     }
     private void ActivateDeactivateTowerImage(bool yesNo)
     {
