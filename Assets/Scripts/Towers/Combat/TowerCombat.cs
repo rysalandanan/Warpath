@@ -14,9 +14,11 @@ public class TowerCombat : MonoBehaviour
     private bool isInRange = false;
     private bool canFire = true;
     private GameObject monsterObject;
+    private AudioSource _attackAudio;
     private void Start()
     {
         _towerCombatRange =GetComponent<TowerCombatRange>();
+        _attackAudio = GetComponent<AudioSource>();
     }
     public void SetTarget(GameObject targetMonster)
     {
@@ -56,8 +58,13 @@ public class TowerCombat : MonoBehaviour
         {
             rb.velocity = direction * projectSpeed;
         }
-
+        PlayAttackSFX();
         yield return new WaitForSeconds(rateOfFire); // Fire rate delay
         canFire = true; // Allow firing again
+    }
+    private void PlayAttackSFX()
+    {
+        _attackAudio.Play();
+        Debug.Log("Play sfx");
     }
 }

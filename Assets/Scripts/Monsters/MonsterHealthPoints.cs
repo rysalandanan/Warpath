@@ -8,6 +8,7 @@ public class MonsterHealthPoints : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private MonsterMovement _monsterMovement;
     private CurrencyManager _currencyManager;
+    private AudioSource _hitAudio;
     private float _arrowDamage = 5;
     private float _crossbowBoltDamage = 10;
     private float _cannonBallDamage = 15;
@@ -21,6 +22,7 @@ public class MonsterHealthPoints : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _monsterMovement = GetComponent<MonsterMovement>();
         _currencyManager = FindAnyObjectByType<CurrencyManager>();
+        _hitAudio = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -91,7 +93,8 @@ public class MonsterHealthPoints : MonoBehaviour
     }
     private void CheckHealthPoints()
     {
-        if(monsterHealth <=0)
+        PlayHitSFX();
+        if (monsterHealth <=0)
         {
             _currencyManager.GainGold(2);
             Destroy(gameObject);
@@ -102,6 +105,10 @@ public class MonsterHealthPoints : MonoBehaviour
         _spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         _spriteRenderer.color = Color.white;
+    }
+    private void PlayHitSFX()
+    {
+        _hitAudio.Play();
     }
 }
 
