@@ -18,13 +18,13 @@ public class BuildMaster : MonoBehaviour
     private Vector3 _selectedLocation;
     private GameObject _towerSelected;
     private Sprite _spriteSelected;
-    private bool isBuilding = false;
+    private bool _isBuilding = false;
     private Vector3 _mousePosition;
     
    
     private void Update()
     {
-        if(isBuilding)
+        if(_isBuilding)
         {
             ShowSelectedTower(_spriteSelected);
             if (Input.GetMouseButtonDown(0))
@@ -34,7 +34,7 @@ public class BuildMaster : MonoBehaviour
             }
             if (Input.GetMouseButtonDown(1))
             {
-                isBuilding = false;
+                _isBuilding = false;
                 ActivateDeactivateTowerImage(false);
             }
         }
@@ -46,12 +46,12 @@ public class BuildMaster : MonoBehaviour
     public void SelectTower(GameObject selectedTower)
     {
         _towerSelected = selectedTower;
-        isBuilding = true;
+        _isBuilding = true;
     }
     public void SelectSprite(Sprite selectedSprite)
     {
         _spriteSelected = selectedSprite;
-        isBuilding = true;
+        _isBuilding = true;
     }
     private void ShowSelectedTower(Sprite selectedSprite)
     {
@@ -63,7 +63,7 @@ public class BuildMaster : MonoBehaviour
     public void BuildTower(GameObject selectedTower)
     {
         Instantiate(selectedTower, _selectedLocation, Quaternion.identity, towerHolder.transform);
-        isBuilding = false;
+        _isBuilding = false;
         ActivateDeactivateTowerImage(false);
         currencyManager.ReduceGold(selectedTowerPrice);
     }

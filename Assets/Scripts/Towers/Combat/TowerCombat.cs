@@ -11,9 +11,9 @@ public class TowerCombat : MonoBehaviour
 
     [SerializeField] private Transform projectileSpawn;
     private TowerCombatRange _towerCombatRange;
-    private bool isInRange = false;
-    private bool canFire = true;
-    private GameObject monsterObject;
+    private bool _isInRange = false;
+    private bool _canFire = true;
+    private GameObject _monsterObject;
     private AudioSource _attackAudio;
     private void Start()
     {
@@ -24,33 +24,32 @@ public class TowerCombat : MonoBehaviour
     {
         if(_towerCombatRange.IsEnemyStillInside(targetMonster))
         {
-            isInRange = true;
-            monsterObject = targetMonster;
+            _isInRange = true;
+            _monsterObject = targetMonster;
         }
         else
         {
-            isInRange = false;
-            monsterObject = targetMonster;
+            _isInRange = false;
+            _monsterObject = targetMonster;
         }
     }
     private void Update()
     {
-        if(isInRange && canFire)
+        if(_isInRange && _canFire)
         {
-            StartCoroutine(AttackMonster(monsterObject));
+            StartCoroutine(AttackMonster(_monsterObject));
         }
     }
     private IEnumerator AttackMonster(GameObject targetMonster)
     {
-        if (targetMonster == null) yield break; // Stop if the target is gone
+        if (targetMonster == null) yield break;
 
-        canFire = false; // Prevent immediate next attack
+        _canFire = false;
         GameObject spawnedProjectile = Instantiate(projectile, projectileSpawn.position, Quaternion.identity);
 
         Vector2 direction = (targetMonster.transform.position - projectileSpawn.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // Apply the angleOffset to adjust the projectile's facing direction
         spawnedProjectile.transform.rotation = Quaternion.Euler(0, 0, angle + angleOffset);
 
         Rigidbody2D rb = spawnedProjectile.GetComponent<Rigidbody2D>();
@@ -59,8 +58,8 @@ public class TowerCombat : MonoBehaviour
             rb.velocity = direction * projectSpeed;
         }
         PlayAttackSFX();
-        yield return new WaitForSeconds(rateOfFire); // Fire rate delay
-        canFire = true; // Allow firing again
+        yield return new WaitForSeconds(rateOfFire);
+        _canFire = true;
     }
     private void PlayAttackSFX()
     {
