@@ -98,6 +98,7 @@ public class MonsterHealthPoints : MonoBehaviour
         {
             _currencyManager.GainGold(2);
             Destroy(gameObject);
+            FindObjectOfType<MonsterSpawner>().MonsterDefeated(gameObject);
         }
     }
     private IEnumerator HitFlash()

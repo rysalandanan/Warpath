@@ -11,35 +11,67 @@ public class MonsterSpawner : MonoBehaviour
         public GameObject[] MonsterPrefabs;
         public float SpawnDelay;
     }
+
     [Header("Spawner Settings")]
     [SerializeField] private List<WaveSettings> monsterWaves;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private TextMeshProUGUI waveCount;
+    [SerializeField] private GameObject wavePrompt;
+
     private int _currentWaveIndex = 0;
+    private List<GameObject> activeMonsters = new List<GameObject>();
+    private bool isWaveActive = false;
 
-    private void Start()
+    public void StartWave()
     {
-        StartCoroutine(SpawnWave());
-    }
-    private IEnumerator SpawnWave()
-    {
-        while (_currentWaveIndex < monsterWaves.Count)
+        if (!isWaveActive)
         {
-            UpdateWaveCountUI();
-            WaveSettings currentWave = monsterWaves[_currentWaveIndex];
-
-            foreach (GameObject monsterPrefab in currentWave.MonsterPrefabs)
-            {
-                Instantiate(monsterPrefab, spawnPosition.position, Quaternion.identity);
-                yield return new WaitForSeconds(currentWave.SpawnDelay);
-            }
-
-            _currentWaveIndex++; // Move to the next wave
-            yield return new WaitForSeconds(5f); // Delay before next wave
+            StartCoroutine(SpawnWave());
         }
     }
+
+    private IEnumerator SpawnWave()
+    {
+        isWaveActive = true;
+        WavePromptActive(false);
+        UpdateWaveCountUI();
+
+        if (_currentWaveIndex >= monsterWaves.Count)
+        {
+            Debug.Log("All waves completed!");
+            yield break;
+        }
+
+        WaveSettings currentWave = monsterWaves[_currentWaveIndex];
+
+        foreach (GameObject monsterPrefab in currentWave.MonsterPrefabs)
+        {
+            GameObject spawnedMonster = Instantiate(monsterPrefab, spawnPosition.position, Quaternion.identity);
+            activeMonsters.Add(spawnedMonster);
+            yield return new WaitForSeconds(currentWave.SpawnDelay);
+        }
+
+        yield return new WaitUntil(() => activeMonsters.Count == 0);
+
+        isWaveActive = false;
+        WavePromptActive(true);
+        _currentWaveIndex++;
+    }
+
+    public void MonsterDefeated(GameObject monster)
+    {
+        if (activeMonsters.Contains(monster))
+        {
+            activeMonsters.Remove(monster);
+        }
+    }
+
     private void UpdateWaveCountUI()
     {
-        waveCount.text = "Wave: " + (_currentWaveIndex + 1);
+        waveCount.text = _currentWaveIndex + 1.ToString();
+    }
+    private void WavePromptActive(bool yesNo)
+    {
+        wavePrompt.SetActive(yesNo);
     }
 }

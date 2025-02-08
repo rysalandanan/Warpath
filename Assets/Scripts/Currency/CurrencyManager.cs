@@ -34,6 +34,6 @@ public class CurrencyManager : MonoBehaviour
     }
     private void UpdateCurrencyCount()
     {
-        currencyCount.text = "Gold: " + totalGold.ToString();
+        currencyCount.text = totalGold.ToString();
     }
 }
