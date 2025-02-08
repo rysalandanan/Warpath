@@ -6971,6 +6971,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899783505}
   m_CullTransparentMesh: 1
+--- !u!1 &917569535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917569536}
+  - component: {fileID: 917569537}
+  m_Layer: 0
+  m_Name: Guide probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &917569536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917569535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1340227171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917569537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917569535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0029623a1d370c346888b3ac97bdaad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wavePrompt: {fileID: 2019932701}
+  minimizedWavePrompt: {fileID: 422358874}
+  guideProbe: {fileID: 2392467885435314902, guid: f630c565eda88c944a5cad94922c168e, type: 3}
+  startingPos: {fileID: 413585463}
 --- !u!1 &1044332747
 GameObject:
   m_ObjectHideFlags: 0
@@ -8275,6 +8323,7 @@ Transform:
   - {fileID: 1552956204}
   - {fileID: 868569011}
   - {fileID: 1703515535}
+  - {fileID: 917569536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356668063

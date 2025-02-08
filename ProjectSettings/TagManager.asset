@@ -13,6 +13,7 @@ TagManager:
   - Ice Shard
   - Lightning Bolt
   - Poison
+  - GuideProbe
   layers:
   - Default
   - TransparentFX

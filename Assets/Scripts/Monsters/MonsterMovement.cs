@@ -13,7 +13,6 @@ public class MonsterMovement : MonoBehaviour
 
     private void Start()
     {
-        
         SetPath();
     }
     private void Update()

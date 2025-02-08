@@ -29,7 +29,6 @@ public class MonsterSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
         }
     }
-
     private IEnumerator SpawnWave()
     {
         isWaveActive = true;
