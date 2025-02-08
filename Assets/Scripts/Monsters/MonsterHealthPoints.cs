@@ -4,6 +4,7 @@ using System.Collections;
 public class MonsterHealthPoints : MonoBehaviour
 {
     [SerializeField] private float monsterHealth;
+    [SerializeField] private float goldGainPerKill;
 
     private SpriteRenderer _spriteRenderer;
     private MonsterMovement _monsterMovement;
@@ -96,7 +97,7 @@ public class MonsterHealthPoints : MonoBehaviour
         PlayHitSFX();
         if (monsterHealth <=0)
         {
-            _currencyManager.GainGold(2);
+            _currencyManager.GainGold(goldGainPerKill);
             Destroy(gameObject);
             FindObjectOfType<MonsterSpawner>().MonsterDefeated(gameObject);
         }

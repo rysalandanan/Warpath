@@ -195,7 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4bccec76876e74fa48c76d6ec57e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterHealth: 50
+  monsterHealth: 30
+  goldGainPerKill: 4
 --- !u!114 &4718993805191194711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody2D: {fileID: 3751410397036841216}
-  movementSpeed: 2
+  movementSpeed: 1.2
 --- !u!82 &376909135665043010
 AudioSource:
   m_ObjectHideFlags: 0

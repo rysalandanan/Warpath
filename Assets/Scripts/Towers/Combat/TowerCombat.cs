@@ -30,7 +30,7 @@ public class TowerCombat : MonoBehaviour
         else
         {
             _isInRange = false;
-            _monsterObject = targetMonster;
+            _monsterObject = null;
         }
     }
     private void Update()
@@ -65,5 +65,9 @@ public class TowerCombat : MonoBehaviour
     {
         _attackAudio.Play();
         Debug.Log("Play sfx");
+    }
+    public GameObject GetCurrentTarget()
+    {
+        return _monsterObject;
     }
 }

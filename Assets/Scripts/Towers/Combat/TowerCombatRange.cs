@@ -12,11 +12,12 @@ public class TowerCombatRange : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Monster"))
+        if (collision.gameObject.CompareTag("Monster") && !monstersInRange.Contains(collision.gameObject))
         {
-            if (!monstersInRange.Contains(collision.gameObject))
+            monstersInRange.Add(collision.gameObject);
+
+            if (_towerCombat.GetCurrentTarget() == null)
             {
-                monstersInRange.Add(collision.gameObject);
                 _towerCombat.SetTarget(collision.gameObject);
             }
         }
@@ -27,13 +28,16 @@ public class TowerCombatRange : MonoBehaviour
         {
             monstersInRange.Remove(collision.gameObject);
 
-            if (monstersInRange.Count > 0)
+            if (_towerCombat.GetCurrentTarget() == collision.gameObject)
             {
-                _towerCombat.SetTarget(monstersInRange[0]);
-            }
-            else
-            {
-                _towerCombat.SetTarget(null);
+                if (monstersInRange.Count > 0)
+                {
+                    _towerCombat.SetTarget(monstersInRange[0]);
+                }
+                else
+                {
+                    _towerCombat.SetTarget(null);
+                }
             }
         }
     }
