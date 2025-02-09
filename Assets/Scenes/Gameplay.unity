@@ -4306,7 +4306,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 80
+          m_FloatArgument: 75
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4362,7 +4362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyManager: {fileID: 1703515536}
   buildMaster: {fileID: 868569012}
-  towerPrice: 80
+  towerPrice: 75
   towerBuyButton: {fileID: 445802214}
 --- !u!1 &460578932
 GameObject:
@@ -7134,7 +7134,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 100
+          m_FloatArgument: 110
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -7190,7 +7190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyManager: {fileID: 1703515536}
   buildMaster: {fileID: 868569012}
-  towerPrice: 100
+  towerPrice: 110
   towerBuyButton: {fileID: 1044332749}
 --- !u!1 &1058437158
 GameObject:
