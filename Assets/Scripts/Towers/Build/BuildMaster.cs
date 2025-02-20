@@ -13,9 +13,9 @@ public class BuildMaster : MonoBehaviour
     [SerializeField] private GameObject towerShop;
 
     [SerializeField] private CurrencyManager currencyManager;
+    [SerializeField] private GamePhase gamePhase;
 
     public float selectedTowerPrice;
-    private Vector3 _selectedLocation;
     private GameObject _towerSelected;
     private Sprite _spriteSelected;
     private bool _isBuilding = false;
@@ -24,12 +24,12 @@ public class BuildMaster : MonoBehaviour
    
     private void Update()
     {
-        if(_isBuilding)
+        if(IsBuilding())
         {
             ShowSelectedTower(_spriteSelected);
-            if (Input.GetMouseButtonDown(0))
+
+            if (Input.GetMouseButtonDown(0) && IsOverBuildableArea())
             {
-                _selectedLocation = GetMousePosition();
                 BuildTower(_towerSelected);
             }
             if (Input.GetMouseButtonDown(1))
@@ -38,8 +38,8 @@ public class BuildMaster : MonoBehaviour
                 ActivateDeactivateTowerImage(false);
             }
         }
-        if(Input.GetKeyDown(KeyCode.B))
-        {
+        if(Input.GetKeyDown(KeyCode.B) && gamePhase.CanBuild())
+        { 
             towerShop.SetActive(true);
         }
     }
@@ -57,12 +57,12 @@ public class BuildMaster : MonoBehaviour
     {
         ActivateDeactivateTowerImage(true);
         towerSelected.sprite = selectedSprite;
-        var _mousePos = GetMousePosition();
+        var _mousePos = BuildLocation();
         towerSelected.transform.position = new Vector3 (_mousePos.x - 1, _mousePos.y, 0f);
     }
     public void BuildTower(GameObject selectedTower)
     {
-        Instantiate(selectedTower, _selectedLocation, Quaternion.identity, towerHolder.transform);
+        Instantiate(selectedTower, BuildLocation(), Quaternion.identity, towerHolder.transform);
         _isBuilding = false;
         ActivateDeactivateTowerImage(false);
         currencyManager.ReduceGold(selectedTowerPrice);
@@ -70,12 +70,28 @@ public class BuildMaster : MonoBehaviour
     private void ActivateDeactivateTowerImage(bool yesNo)
     {
         towerSelected.gameObject.SetActive(yesNo);
-        Debug.Log(yesNo);
     }
-    private Vector3 GetMousePosition()
+    private Vector3 BuildLocation()
     {
         var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _mousePosition = new Vector3(mouseWorldPos.x,mouseWorldPos.y, 0f);
         return _mousePosition;
+    }
+    private bool IsOverBuildableArea()
+    {
+        Vector3 mouseWorldPos = _mousePosition;
+        Vector2 mousePos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+        if (hit.collider != null && hit.collider.gameObject.name == "Buildable Area")
+        {
+            return true;
+        }
+        return false;
+    }
+    private bool IsBuilding()
+    {
+        return _isBuilding;
     }
 }

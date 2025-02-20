@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class TowerGold : MonoBehaviour
+public class GoldGenerator : MonoBehaviour
 {
     [SerializeField] private float goldGenerateAmount;
     private bool _isEarning = false;
@@ -11,18 +11,20 @@ public class TowerGold : MonoBehaviour
     {
         _currencyManager = FindAnyObjectByType<CurrencyManager>();
     }
-    private void Awake()
-    {
-        _isEarning = true;
-        StartCoroutine(GenerateGold());
-    }
-
     private IEnumerator GenerateGold()
     {
         while (_isEarning)
         {
-            yield return new WaitForSeconds(5);
-            _currencyManager.GainGold(goldGenerateAmount);
+            if(Time.timeScale > 0)
+            {
+                yield return new WaitForSeconds(5);
+                _currencyManager.GainGold(goldGenerateAmount);
+            }
         }
+    }
+    public void canEarn(bool yesNo)
+    {
+        _isEarning = yesNo;
+        StartCoroutine(GenerateGold());
     }
 }

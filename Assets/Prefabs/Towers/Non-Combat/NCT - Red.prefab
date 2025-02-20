@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4159893658284975693}
   - component: {fileID: 8749721789499592445}
   - component: {fileID: 248797018291795383}
-  - component: {fileID: 5508943979740178302}
   - component: {fileID: 7876178245186225295}
   m_Layer: 0
   m_Name: NCT - Red
@@ -154,18 +153,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.375, y: 1.75}
   m_EdgeRadius: 0
---- !u!114 &5508943979740178302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9151393750167932744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25908c80d5958841b060bf9bb457186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7876178245186225295
 MonoBehaviour:
   m_ObjectHideFlags: 0
