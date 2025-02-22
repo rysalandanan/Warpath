@@ -5,7 +5,9 @@ public class GamePhase : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI gameStatus;
     [SerializeField] private MonsterSpawner monsterSpawner;
+    [SerializeField] private TextMeshProUGUI dayCount;
     private bool _isBuildPhase;
+    private int _count;
 
     private void Start()
     {
@@ -40,6 +42,12 @@ public class GamePhase : MonoBehaviour
             _isBuildPhase = false;
             SetGameStatus();
             monsterSpawner.StartWave();
+            SetDayCount();
         }
+    }
+    private void SetDayCount()
+    {
+        _count++;
+        dayCount.text = "Day: " + _count.ToString();
     }
 }

@@ -1840,6 +1840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStatus: {fileID: 282688514}
   monsterSpawner: {fileID: 1552956205}
+  dayCount: {fileID: 2045585828}
 --- !u!1 &154591832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2955,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Combat
 
-    Build Cost: <color=red>75</color>
+    Build Cost: <color=red>20</color>
 
     Damage: 5'
   m_isRightToLeft: 0
@@ -3067,8 +3068,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 0}
-  m_SizeDelta: {x: 160, y: 80}
+  m_AnchoredPosition: {x: -262.815, y: 0}
+  m_SizeDelta: {x: 309.63, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282688514
 MonoBehaviour:
@@ -3117,7 +3118,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.55
+  m_fontSize: 44.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7935,7 +7936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 96.72998, y: 0}
+  m_AnchoredPosition: {x: 116, y: 0}
   m_SizeDelta: {x: 193.46, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217421610
@@ -8597,7 +8598,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -250, y: 0}
-  m_SizeDelta: {x: 160, y: 40}
+  m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346053681
 MonoBehaviour:
@@ -8646,12 +8647,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.6
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 50
+  m_fontSizeMax: 50
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -9830,7 +9831,7 @@ MonoBehaviour:
     - {fileID: 6943933876591872424, guid: 85bb62c826f267b4999e48733cf74181, type: 3}
     - {fileID: 6943933876591872424, guid: 85bb62c826f267b4999e48733cf74181, type: 3}
     - {fileID: 6943933876591872424, guid: 85bb62c826f267b4999e48733cf74181, type: 3}
-    SpawnDelay: 2
+    SpawnDelay: 1
   - MonsterPrefabs:
     - {fileID: 6943933876591872424, guid: 85bb62c826f267b4999e48733cf74181, type: 3}
     - {fileID: 6943933876591872424, guid: 85bb62c826f267b4999e48733cf74181, type: 3}
@@ -9842,7 +9843,7 @@ MonoBehaviour:
     - {fileID: 520604599051645598, guid: 9ab164da1329ce546a0f1f8f536afe4b, type: 3}
     - {fileID: 520604599051645598, guid: 9ab164da1329ce546a0f1f8f536afe4b, type: 3}
     - {fileID: 520604599051645598, guid: 9ab164da1329ce546a0f1f8f536afe4b, type: 3}
-    SpawnDelay: 2
+    SpawnDelay: 1
   - MonsterPrefabs:
     - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
     - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
@@ -9854,7 +9855,103 @@ MonoBehaviour:
     - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
     - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
     - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
-    SpawnDelay: 2
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
+  - MonsterPrefabs:
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    - {fileID: 1488987608780861192, guid: f280de9dc90ea044f86c8f59b77401e1, type: 3}
+    SpawnDelay: 1
   spawnPosition: {fileID: 413585463}
   gamePhase: {fileID: 119124980}
 --- !u!1 &1555003854
@@ -10789,7 +10886,7 @@ MonoBehaviour:
   - {fileID: 345764926}
   - {fileID: 1963345795}
   - {fileID: 81652682}
-  totalGold: 200
+  totalGold: 40
 --- !u!1 &1706027474
 GameObject:
   m_ObjectHideFlags: 0
@@ -12008,7 +12105,7 @@ GameObject:
   - component: {fileID: 2045585829}
   - component: {fileID: 2045585828}
   m_Layer: 5
-  m_Name: Wave count
+  m_Name: Day count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12030,8 +12127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 160, y: 40}
+  m_AnchoredPosition: {x: 181.39001, y: -17.15}
+  m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2045585828
 MonoBehaviour:
@@ -12053,7 +12150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wave count here
+  m_text: Day count here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12467b9511da2c45952a26246a57801, type: 2}
   m_sharedMaterial: {fileID: 1240719491550828214, guid: c12467b9511da2c45952a26246a57801, type: 2}
@@ -12080,12 +12177,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.65
+  m_fontSize: 47.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 50
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -12589,7 +12686,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2066215764}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
